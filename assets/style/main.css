@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --text-color: #00b34a;
+  --but-color: #00b34a;
+  --bg-color: #fff;
+}
+body.crescent-moon {
+  --text-color: #fcfcfc;
+  --but-color: #193f5b;
+  --bg-color: #030f29;
+}
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: var(--bg-color);
+}
+.container {
+  padding: 30px 15px;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1190px;
+  }
+}
+header {
+  border-bottom: 1px solid #bdbaba;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.container img {
+  width: 40px;
+  cursor: pointer;
+}
+.container a {
+  text-decoration: none;
+  font-size: 40px;
+  color: var(--text-color);
+}
