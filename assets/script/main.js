@@ -30,8 +30,20 @@ function gutUesData() {
           <div class="name"><h3>${data.name}</h3></div>
             <a href="${data.html_url}" target="_blank">GitHub Profile  </a>
     </div>
+    <ol id ="user-repos" class="user-repos"></ol>
     
 `;
+      });
+    fetch(`https://api.github.com/users/${searchinput.value}/repos`)
+      .then((res) => res.json())
+      .then((data) => {
+        let repos = "";
+        for (let i = 0; i < data.length; i++) {
+          repos += `
+          <li><a href="${data[i].homepage}" target="_blank">${data[i].name}</a></li>
+          `;
+        }
+        document.getElementById("user-repos").innerHTML = repos;
       });
   }
 }
